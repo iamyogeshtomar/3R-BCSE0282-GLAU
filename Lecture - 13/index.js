@@ -1,6 +1,7 @@
 const express = require(`express`);
 const app = express();
 const mongoose = require(`mongoose`);
+const methodOverride = require(`method-override`);
 const path = require(`path`);
 const PORT = 3000;
 
@@ -12,6 +13,8 @@ const PORT = 3000;
     console.log(error);
   }
 })();
+
+app.use(methodOverride(`_method`));
 
 app.use(express.urlencoded({ extended: true }));
 

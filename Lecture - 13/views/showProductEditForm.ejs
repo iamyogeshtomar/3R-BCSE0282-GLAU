@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add New Product</title>
+  </head>
+  <body>
+    <form action="/<%= oldProduct._id %>?_method=PUT" method="post">
+      <br />
+      <div>
+        <label for="name">Name</label><br />
+        <input type="text" name="name" value="<%= oldProduct.name %>" /><br />
+      </div>
+      <br />
+      <br />
+      <div>
+        <label for="price">Price</label><br />
+        <input
+          type="number"
+          name="price"
+          value="<%= oldProduct.price %>"
+        /><br />
+      </div>
+      <br />
+      <br />
+      <div>
+        <label for="description">Description</label><br />
+        <!-- <input type="text" name="description"/><br /> -->
+        <textarea name="description"><%= oldProduct.description %></textarea>
+      </div>
+      <br />
+      <br />
+      <div>
+        <label for="category">Category</label><br />
+        <input
+          type="text"
+          name="category"
+          value="<%= oldProduct.category %>"
+        /><br />
+      </div>
+      <br />
+      <button type="submit">Save Product</button>
+    </form>
+  </body>
+</html>
