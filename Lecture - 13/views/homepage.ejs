@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AmaKart</title>
+  </head>
+  <body>
+    <button><a href="/new">+ Add New Product</a></button>
+    <br />
+    <br />
+    <br />
+    <ul>
+      <% allProducts.forEach(product => { %>
+      <br />
+      <br />
+      <li>
+        <h1><%= product.name %></h1>
+        <h3><%= product.price %></h3>
+        <p><%= product.description %></p>
+      </li>
+      <br />
+      <br />
+      <% }) %>
+    </ul>
+  </body>
+</html>
